@@ -1,17 +1,17 @@
 {
-  "context": "<div style=\"text-align: right; margin:\">\n<p style=\"margin: 0px !important\">{% trans 'APPROVED' %}</p>\n<p style=\"margin: 0px !important\">{% trans 'protocol' %} {{ coopenomics_agreement.protocol_number }}</p>\n<p style=\"margin: 0px !important\">{{ coop.full_name }}</p>\n<p style=\"margin: 0px !important\">{% trans 'from' %} {{ coopenomics_agreement.protocol_day_month_year }}</p>\n</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'PROVISION' %}</h1>\n{% trans 'consumer_program_title' %}\n</div>\n<p> {% trans 'coop_agreement_intro_1' %} {{coop.chairman.last_name}} {{coop.chairman.first_name}} {{coop.chairman.middle_name}} {% trans 'coop_agreement_intro_2' %} {{ partner.short_name}} {% trans 'coop_agreement_intro_3' %}{{partner.represented_by.last_name}} {{partner.represented_by.first_name}} {{partner.represented_by.middle_name}}{% trans 'coop_agreement_intro_4' %} </p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_1' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_1_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_2' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_2_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_3' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_3_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_4' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_4_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_5' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_5_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_6' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_6_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_7' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_7_text', covars.contact_email %}</p>\n<div class=\"signature\">\n{% trans 'acceptance_agreement' %}</div>\n\n",
+  "context": "<div style=\"text-align: right; margin:\">\n<p style=\"margin: 0px !important\">{% trans 'APPROVED' %}</p>\n<p style=\"margin: 0px !important\">{% trans 'protocol' %} {{ covars.coopenomics_agreement.protocol_number }}</p>\n<p style=\"margin: 0px !important\">{{ coop.full_name }}</p>\n<p style=\"margin: 0px !important\">{% trans 'from' %} {{ covars.coopenomics_agreement.protocol_day_month_year }}</p>\n</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'PROVISION' %}</h1>\n{% trans 'consumer_program_title' %}\n</div>\n<p> {% trans 'coop_agreement_intro_1' %} {{coop.chairman.last_name}} {{coop.chairman.first_name}} {{coop.chairman.middle_name}} {% trans 'coop_agreement_intro_2' %} {{ partner.short_name}} {% trans 'coop_agreement_intro_3' %}{{partner.represented_by.last_name}} {{partner.represented_by.first_name}} {{partner.represented_by.middle_name}}{% trans 'coop_agreement_intro_4' %} </p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_1' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_1_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_2' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_2_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_3' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_3_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_4' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_4_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_5' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_5_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_6' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_6_text' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'coop_agreement_7' %}</h3>\n</div>\n<p>{% trans 'coop_agreement_7_text', covars.contact_email %}</p>\n<div class=\"signature\">\n{% trans 'acceptance_agreement' %}</div>\n\n",
   "model": {
     "coop.full_name": "потребительский кооператив \"Восход\"",
-    "coopenomics_agreement.protocol_day_month_year": "10 апреля 2024",
     "coop.chairman.last_name": "Муравьев",
     "coop.chairman.first_name": "Алексей",
     "coop.chairman.middle_name": "Николаевич",
     "covars.contact_email": "contact@email.ru",
     "partner.short_name": "ПК \"Лаурус\"",
-    "coopenomics_agreement.protocol_number": "10-04-2024",
     "partner.represented_by.last_name": "Иванов",
     "partner.represented_by.first_name": "Иван",
-    "partner.represented_by.middle_name": "Иванович"
+    "partner.represented_by.middle_name": "Иванович",
+    "covars.coopenomics_agreement.protocol_day_month_year": "10 апреля 2024",
+    "covars.coopenomics_agreement.protocol_number": "10-04-2024"
   },
   "translation": {
     "APPROVED": "УТВЕРЖДЕНО",
@@ -49,11 +49,11 @@
       }
     },
     "covars": {
-      "contact_email": "contact@email.ru"
-    },
-    "coopenomics_agreement": {
-      "protocol_day_month_year": "10 апреля 2024",
-      "protocol_number": "10-04-2024"
+      "contact_email": "contact@email.ru",
+      "coopenomics_agreement": {
+        "protocol_day_month_year": "10 апреля 2024",
+        "protocol_number": "10-04-2024"
+      }
     },
     "partner": {
       "short_name": "ПК \"Лаурус\"",
