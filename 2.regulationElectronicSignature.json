@@ -1,13 +1,13 @@
 {
-  "context": "<div style=\"text-align: right; margin:\">\n<p style=\"margin: 0px !important\">{% trans 'APPROVED' %}</p>\n<p style=\"margin: 0px !important\">{% trans 'protocol' %} {{ protocol_number }}</p>\n<p style=\"margin: 0px !important\">{{ coop.full_name }} </p>\n<p style=\"margin: 0px !important\">{% trans 'from' %} {{ protocol_day_month_year }}</p>\n</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'PROVISION' %} {{full_abbr_genitive}} \"{{name}}\"</h1>\n</div>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_1' %}</h3>\n</div>\n<p> {% trans 'regulation_text_1_1' %} {{website}}. {% trans 'regulation_text_1_2' %} {{full_abbr_genitive}} \"{{name}}\" {% trans 'regulation_text_1_4' %} {{short_abbr}} \"{{name}}\" {% trans 'regulation_text_1_6' %} {{short_abbr}} \"{{name}}\" {% trans 'regulation_text_1_8' %} {{short_abbr}} \"{{name}}\".{% trans 'regulation_text_1_10' %} </p>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_2' %}</h3>\n</div>\n<p>{% trans 'regulation_text_2_1' %} {{short_abbr}} \"{{name}}\",  {% trans 'regulation_text_2_3' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_3' %} </h3>\n</div>\n<p>{% trans 'regulation_text_3_1' %} {{website}} {% trans 'regulation_text_3_2' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_4' %}</h3>\n</div>\n<p>{% trans 'regulation_pep_text_4' %} </p>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_5' %}</h3>\n</div>\n<p>{% trans 'regulation_pep_text_5' %} </p>\n<div class=\"signature\">\n{% trans 'acceptance_agreement' %}</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'PRIL_PROVISION' %} </h1>\n</div>\n<p>{% trans 'PRIL_PROVISION_TEXT' %}</p>",
+  "context": "<div style=\"text-align: right; margin:\">\n<p style=\"margin: 0px !important\">{% trans 'APPROVED' %}</p>\n<p style=\"margin: 0px !important\">{% trans 'protocol' %} {{ signature_agreement.protocol_number }}</p>\n<p style=\"margin: 0px !important\">{{ coop.full_name }} </p>\n<p style=\"margin: 0px !important\">{% trans 'from' %} {{ signature_agreement.protocol_day_month_year }}</p>\n</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'PROVISION' %} {{covars.full_abbr_genitive}} \"{{covars.name}}\"</h1>\n</div>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_1' %}</h3>\n</div>\n<p> {% trans 'regulation_text_1_1' %} {{covars.website}}. {% trans 'regulation_text_1_2' %} {{covars.full_abbr_genitive}} \"{{covars.name}}\" {% trans 'regulation_text_1_4' %} {{covars.short_abbr}} \"{{covars.name}}\" {% trans 'regulation_text_1_6' %} {{covars.short_abbr}} \"{{covars.name}}\" {% trans 'regulation_text_1_8' %} {{covars.short_abbr}} \"{{covars.name}}\".{% trans 'regulation_text_1_10' %} </p>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_2' %}</h3>\n</div>\n<p>{% trans 'regulation_text_2_1' %} {{covars.short_abbr}} \"{{covars.name}}\",  {% trans 'regulation_text_2_3' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_3' %} </h3>\n</div>\n<p>{% trans 'regulation_text_3_1' %} {{covars.website}} {% trans 'regulation_text_3_2' %}</p>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_4' %}</h3>\n</div>\n<p>{% trans 'regulation_pep_text_4' %} </p>\n<div style=\"text-align: left\">\n<h3>{% trans 'regulation_pep_title_5' %}</h3>\n</div>\n<p>{% trans 'regulation_pep_text_5' %} </p>\n<div class=\"signature\">\n{% trans 'acceptance_agreement' %}</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'PRIL_PROVISION' %} </h1>\n</div>\n<p>{% trans 'PRIL_PROVISION_TEXT' %}</p>",
   "model": {
     "coop.full_name": "потребительский кооператив \"Восход\"",
-    "protocol_number": "10-04-2024",
-    "protocol_day_month_year": "10 апреля 2024 г.",
-    "name": "Восход",
-    "website": "цифровой-кооператив.рф",
-    "short_abbr": "ПК",
-    "full_abbr_genitive": "потребительского кооператива"
+    "signature_agreement.protocol_number": "10-04-2024",
+    "signature_agreement.protocol_day_month_year": "10 апреля 2024 г.",
+    "covars.full_abbr_genitive": "потребительского кооператива",
+    "covars.short_abbr": "ПК",
+    "covars.website": "цифровой-кооператив.рф",
+    "covars.name": "Восход"
   },
   "translation": {
     "APPROVED": "УТВЕРЖДЕНО",
@@ -39,11 +39,15 @@
     "coop": {
       "full_name": "потребительский кооператив \"Восход\""
     },
-    "protocol_number": "10-04-2024",
-    "protocol_day_month_year": "10 апреля 2024 г.",
-    "name": "Восход",
-    "website": "цифровой-кооператив.рф",
-    "short_abbr": "ПК",
-    "full_abbr_genitive": "потребительского кооператива"
+    "signature_agreement": {
+      "protocol_number": "10-04-2024",
+      "protocol_day_month_year": "10 апреля 2024 г."
+    },
+    "covars": {
+      "full_abbr_genitive": "потребительского кооператива",
+      "short_abbr": "ПК",
+      "website": "цифровой-кооператив.рф",
+      "name": "Восход"
+    }
   }
 }
