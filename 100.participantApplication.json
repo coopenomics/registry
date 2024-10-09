@@ -1,5 +1,5 @@
 {
-  "context": "<style>\nh1 {\nmargin: 0px;\ntext-align:center;\n}\n</style>\n{% if type == 'individual' %}\n<h1 class=\"header\">{% trans 'application_individual' %}</h1>\n<p style=\"text-align: center\">{% trans 'in' %} {{ coop.full_name }}<p>\n<p style=\"text-align: right\">{{ meta.created_at }}, {{coop.city}}</p>\n<p>{% trans 'to_council_of' %} {{ coop.short_name }} {% trans 'from' %} {{ individual.last_name }} {{ individual.first_name }} {{ individual.middle_name }}, {% trans 'birthdate' %} {{ individual.birthdate }}, {% trans 'registration_address' %} {{ individual.full_address }}, {% trans 'phone_and_email_notice', individual.phone, individual.email %}</p>\n<p>{% trans 'request_to_join' %} {{ coop.full_name }}. {% trans 'acknowledge_documents_individual' %} {% if coop.is_branched %}</p> \n<p>{% trans 'authorize_chairman_branch', individual.branch_name %} {% endif %} </p>\n<p>{% trans 'obligation_to_pay_individual', coop.initial, coop.minimum %}</p>\n<p>{% trans 'agreement_on_sms_email_notice_individual' %}</p>\n<div class=\"signature\">\n<img style=\"max-width: 150px;\" src=\"{{ signature }}\"/>\n<p>{% trans 'signature' %} </p>\n<p style=\"text-align: right;\">{{ individual.last_name }} {{ individual.first_name }} {{ individual.middle_name }}</p>\n</div>\n\n{% elif type == 'entrepreneur' %}\n<h1 class=\"header\">{% trans 'application_entrepreneur' %}</h1>\n<p style=\"text-align: center\">{% trans 'in' %} {{ coop.full_name }}<p>\n<p style=\"text-align: right\">{{ meta.created_at }}, {{coop.city}}</p>  <p>{% trans 'to_council_of' %} {{ coop.short_name }} {% trans 'from_entrepreneur' %} {{ entrepreneur.last_name }} {{ entrepreneur.first_name }} {{ entrepreneur.middle_name }}, {% trans 'birthdate' %} {{ entrepreneur.birthdate }}, {% trans 'registration_address' %} {{ entrepreneur.full_address }}, {% trans 'entrepreneur_details', entrepreneur.details.inn, entrepreneur.details.ogrn, entrepreneur.bank_account.account_number, entrepreneur.bank_account.details.kpp, entrepreneur.bank_account.details.corr, entrepreneur.bank_account.details.bik, entrepreneur.bank_account.bank_name %}, {% trans 'phone_and_email_notice', entrepreneur.phone, entrepreneur.email %}</p>\n<p>{% trans 'request_to_join' %} {{ coop.full_name }}. {% trans 'acknowledge_documents_entrepreneur' %}</p> \n<p>{% if coop.is_branched %}{% trans 'authorize_chairman_branch', entrepreneur.branch_name %} {% endif %} </p>\n<p>{% trans 'obligation_to_pay_entrepreneur', coop.initial, coop.minimum %} </p>\n<p>{% trans 'agreement_on_sms_email_notice_entrepreneur' %}</p>\n<div class=\"signature\">\n<img style=\"max-width: 150px;\" src=\"{{ signature }}\"/>\n<p>{% trans 'signature' %} </p>\n<p style=\"text-align: right;\">{{ entrepreneur.last_name }} {{ entrepreneur.first_name }} {{ entrepreneur.middle_name }}</p>\n</div>\n\n{% elif type == 'organization' %}\n<h1 class=\"header\">{% trans 'application_legal_entity' %}</h1>\n<p style=\"text-align: center\">{% trans 'in' %} {{ coop.full_name }}<p>\n<p style=\"text-align: right\">{{ meta.created_at }}, {{coop.city}}</p>\n<p>{% trans 'to_council_of' %} «{{ coop.full_name }}» {% trans 'from_legal_entity' %} {{ organization.full_name }}, {% trans 'legal_address' %} {{ organization.full_address }}, {% trans 'legal_entity_details', organization.details.inn, organization.details.ogrn, organization.bank_account.account_number, organization.bank_account.details.kpp, organization.bank_account.details.corr, organization.bank_account.details.bik, organization.bank_account.bank_name %}, {% trans 'phone_and_email_notice', organization.phone, organization.email %}</p>\n<p>{% trans 'request_to_join_legal_entity', organization.represented_by.position, organization.represented_by.last_name, organization.represented_by.first_name, organization.represented_by.middle_name, organization.represented_by.based_on %} {{ coop.full_name }}.</p>\n<p>{% trans 'acknowledge_documents_legal_entity' %}</p> \n<p>{% if coop.is_branched %}{% trans 'authorize_chairman_branch_organization', organization.branch_name %} {% endif %}</p>\n<p>{% trans 'obligation_to_pay_legal_entity', coop.initial, coop.minimum %}</p>\n<p>{% trans 'agreement_on_sms_email_notice_legal_entity' %}</p>\n<div class=\"signature\">\n<img style=\"max-width: 150px;\" src=\"{{ signature }}\"/>\n<p>{% trans 'signature' %} </p>\n<p style=\"text-align: right;\">{{ organization.represented_by.last_name }} {{ organization.represented_by.first_name }} {{ organization.represented_by.middle_name }}</p>\n</div>\n\n{% endif %}\n\n",
+  "context": "<style>\n.digital-document h1 {\nmargin: 0px;\ntext-align:center;\n}\n.digital-document {padding: 20px;}\n</style>\n<div class=\"digital-document\">\n<div style=\"text-align: right; margin:\">\n<p style=\"margin: 0px !important\">{% trans 'APPROVED' %}</p>\n<p style=\"margin: 0px !important\">{% trans 'protocol' %} {{ vars.participant_application.protocol_number }}</p>\n<p style=\"margin: 0px !important\">{{ coop.full_name }}</p>\n<p style=\"margin: 0px !important\">{% trans 'from' %} {{ vars.participant_application.protocol_day_month_year }}</p>\n</div>\n\n{% if type == 'individual' %}\n<h1 class=\"header\">{% trans 'application_individual' %}</h1>\n<p style=\"text-align: center\">{% trans 'in' %} {{ coop.full_name }}<p>\n<p style=\"text-align: right\">{{ meta.created_at }}, {{coop.city}}</p>\n<p>{% trans 'to_council_of' %} {{ coop.short_name }} {% trans 'from' %} {{ individual.last_name }} {{ individual.first_name }} {{ individual.middle_name }}, {% trans 'birthdate' %} {{ individual.birthdate }}, {% trans 'registration_address' %} {{ individual.full_address }}, {% trans 'phone_and_email_notice', individual.phone, individual.email %}{% if vars.passport_request == 'yes' %} {% trans 'passport' %} № {{individual.passport.series}} {{individual.passport.number}}, \n{% trans 'passport_code' %} {{individual.passport.code}}, {% trans 'passport_issued' %} {{individual.passport.issued_by}} {% trans 'passport_from' %} {{individual.passport.issued_at}}. {% endif %}</p>\n<p>{% trans 'request_to_join' %} {{ coop.full_name }}. {% trans 'acknowledge_documents_individual' %} {% if coop.is_branched %}</p> \n<p>{% trans 'authorize_chairman_branch', individual.branch_name %} {% endif %} </p>\n<p>{% trans 'obligation_to_pay_individual', coop.initial, coop.minimum %}</p>\n<p>{% trans 'agreement_on_sms_email_notice_individual' %}</p>\n<div class=\"signature\">\n<img style=\"max-width: 150px;\" src=\"{{ signature }}\"/>\n<p>{% trans 'signature' %} </p>\n<p style=\"text-align: right;\">{{ individual.last_name }} {{ individual.first_name }} {{ individual.middle_name }}</p>\n</div>\n\n{% elif type == 'entrepreneur' %}\n<h1 class=\"header\">{% trans 'application_entrepreneur' %}</h1>\n<p style=\"text-align: center\">{% trans 'in' %} {{ coop.full_name }}<p>\n<p style=\"text-align: right\">{{ meta.created_at }}, {{coop.city}}</p>  <p>{% trans 'to_council_of' %} {{ coop.short_name }} {% trans 'from_entrepreneur' %} {{ entrepreneur.last_name }} {{ entrepreneur.first_name }} {{ entrepreneur.middle_name }}, {% trans 'birthdate' %} {{ entrepreneur.birthdate }}, {% trans 'registration_address' %} {{ entrepreneur.full_address }}, {% trans 'entrepreneur_details', entrepreneur.details.inn, entrepreneur.details.ogrn, entrepreneur.bank_account.account_number, entrepreneur.bank_account.details.kpp, entrepreneur.bank_account.details.corr, entrepreneur.bank_account.details.bik, entrepreneur.bank_account.bank_name %}, {% trans 'phone_and_email_notice', entrepreneur.phone, entrepreneur.email %}</p>\n<p>{% trans 'request_to_join' %} {{ coop.full_name }}. {% trans 'acknowledge_documents_entrepreneur' %}</p> \n<p>{% if coop.is_branched %}{% trans 'authorize_chairman_branch', entrepreneur.branch_name %} {% endif %} </p>\n<p>{% trans 'obligation_to_pay_entrepreneur', coop.initial, coop.minimum %} </p>\n<p>{% trans 'agreement_on_sms_email_notice_entrepreneur' %}</p>\n<div class=\"signature\">\n<img style=\"max-width: 150px;\" src=\"{{ signature }}\"/>\n<p>{% trans 'signature' %} </p>\n<p style=\"text-align: right;\">{{ entrepreneur.last_name }} {{ entrepreneur.first_name }} {{ entrepreneur.middle_name }}</p>\n</div>\n\n{% elif type == 'organization' %}\n<h1 class=\"header\">{% trans 'application_legal_entity' %}</h1>\n<p style=\"text-align: center\">{% trans 'in' %} {{ coop.full_name }}<p>\n<p style=\"text-align: right\">{{ meta.created_at }}, {{coop.city}}</p>\n<p>{% trans 'to_council_of' %} «{{ coop.full_name }}» {% trans 'from_legal_entity' %} {{ organization.full_name }}, {% trans 'legal_address' %} {{ organization.full_address }}, {% trans 'legal_entity_details', organization.details.inn, organization.details.ogrn, organization.bank_account.account_number, organization.bank_account.details.kpp, organization.bank_account.details.corr, organization.bank_account.details.bik, organization.bank_account.bank_name %}, {% trans 'phone_and_email_notice', organization.phone, organization.email %}</p>\n<p>{% trans 'request_to_join_legal_entity', organization.represented_by.position, organization.represented_by.last_name, organization.represented_by.first_name, organization.represented_by.middle_name, organization.represented_by.based_on %} {{ coop.full_name }}.</p>\n<p>{% trans 'acknowledge_documents_legal_entity' %}</p> \n<p>{% if coop.is_branched %}{% trans 'authorize_chairman_branch_organization', organization.branch_name %} {% endif %}</p>\n<p>{% trans 'obligation_to_pay_legal_entity', coop.initial, coop.minimum %}</p>\n<p>{% trans 'agreement_on_sms_email_notice_legal_entity' %}</p>\n<div class=\"signature\">\n<img style=\"max-width: 150px;\" src=\"{{ signature }}\"/>\n<p>{% trans 'signature' %} </p>\n<p style=\"text-align: right;\">{{ organization.represented_by.last_name }} {{ organization.represented_by.first_name }} {{ organization.represented_by.middle_name }}</p>\n</div>\n\n{% endif %}\n</div>\n",
   "model": {
     "coop.short_name": "ПК \"ВОСХОД\"",
     "meta.created_at": "04.03.2024 10:54",
@@ -11,7 +11,6 @@
     "individual.first_name": "Алексей",
     "individual.middle_name": "Николаевич",
     "individual.birthdate": "04.03.1990",
-    "individual.address": "Вострецова 3-84",
     "individual.phone": "790343432423",
     "individual.email": "email@gmail.com",
     "individual.branch_name": "ROMASHKA",
@@ -19,9 +18,9 @@
     "entrepreneur.first_name": "Алексей",
     "entrepreneur.middle_name": "Николаевич",
     "entrepreneur.birthdate": "04.03.1990",
-    "entrepreneur.full_address": "Вострецова 3-84",
+    "entrepreneur.full_address": "Советов 3-84",
     "organization.full_name": "ООО РОМАШКА",
-    "organization.full_address": "Вострецова 3-84",
+    "organization.full_address": "Советов 3-84",
     "organization.represented_by.last_name": "Муравьев",
     "organization.represented_by.first_name": "Алексей",
     "organization.represented_by.middle_name": "Николаевич",
@@ -49,7 +48,18 @@
     "coop.is_branched": "true",
     "organization.phone": "+35345345345",
     "organization.email": "an.mddf@gmail.com",
-    "signature": ""
+    "signature": "",
+    "individual.full_address": "Советов 3-84",
+    "vars.full_abbr_genitive": "потребительского кооператива",
+    "vars.name": "\"ВОСХОД\"",
+    "vars.participant_application.protocol_number": "10-04-2024",
+    "vars.participant_application.protocol_day_month_year": "10 апреля 2024 г.",
+    "vars.passport_request": "yes",
+    "individual.passport.series": "7712",
+    "individual.passport.number": "122112",
+    "individual.passport.issued_by": "отделом УФМС г. Москва",
+    "individual.passport.issued_at": "10.05.2010",
+    "individual.passport.code": "220-220"
   },
   "translation": {
     "from": "от",
@@ -79,7 +89,13 @@
     "authorize_chairman_branch_organization": "Уполномочивает Председателя кооперативного участка {0} принимать участие с правом голоса в Общих собраниях уполномоченных Общества, на период моего членства в Обществе при указанном кооперативном участке.",
     "signature": "подпись",
     "in": "в",
-    "request_to_join": "Прошу принять меня в пайщики"
+    "request_to_join": "Прошу принять меня в пайщики",
+    "APPROVED": "УТВЕРЖДЕНО",
+    "protocol": "Протоколом Совета № СС",
+    "passport": "Паспорт",
+    "passport_code": "код подразделения",
+    "passport_issued": "выдан",
+    "passport_from": "от"
   },
   "object_model": {
     "coop": {
@@ -98,17 +114,24 @@
       "first_name": "Алексей",
       "middle_name": "Николаевич",
       "birthdate": "04.03.1990",
-      "address": "Вострецова 3-84",
       "phone": "790343432423",
       "email": "email@gmail.com",
-      "branch_name": "ROMASHKA"
+      "branch_name": "ROMASHKA",
+      "full_address": "Советов 3-84",
+      "passport": {
+        "series": "7712",
+        "number": "122112",
+        "issued_by": "отделом УФМС г. Москва",
+        "issued_at": "10.05.2010",
+        "code": "220-220"
+      }
     },
     "entrepreneur": {
       "last_name": "Муравьев",
       "first_name": "Алексей",
       "middle_name": "Николаевич",
       "birthdate": "04.03.1990",
-      "full_address": "Вострецова 3-84",
+      "full_address": "Советов 3-84",
       "details": {
         "inn": "34534534534",
         "ogrn": "345345345"
@@ -128,7 +151,7 @@
     },
     "organization": {
       "full_name": "ООО РОМАШКА",
-      "full_address": "Вострецова 3-84",
+      "full_address": "Советов 3-84",
       "represented_by": {
         "last_name": "Муравьев",
         "first_name": "Алексей",
@@ -154,6 +177,15 @@
       "email": "an.mddf@gmail.com"
     },
     "type": "individual",
-    "signature": ""
+    "signature": "",
+    "vars": {
+      "full_abbr_genitive": "потребительского кооператива",
+      "name": "\"ВОСХОД\"",
+      "participant_application": {
+        "protocol_number": "10-04-2024",
+        "protocol_day_month_year": "10 апреля 2024 г."
+      },
+      "passport_request": "yes"
+    }
   }
 }

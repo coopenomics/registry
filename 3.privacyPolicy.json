@@ -1,15 +1,15 @@
 {
-  "context": "<div style=\"text-align: right; margin:\">\n<p style=\"margin: 0px !important\">{% trans 'APPROVED' %}</p>\n<p style=\"margin: 0px !important\">{% trans 'protocol' %} {{ covars.privacy_agreement.protocol_number }}</p>\n<p style=\"margin: 0px !important\">{{ coop.full_name }} </p>\n<p style=\"margin: 0px !important\">{% trans 'from' %} {{ covars.privacy_agreement.protocol_day_month_year }}</p>\n</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'PRIVACY_POLICY' %}</h1>\n</div>\n<div style=\"text-align: left\">\n<bold>{% trans 'privacy_policy_title_1' %}</bold>\n</div>\n<p> {% trans 'privacy_policy_text_1_1' %} {{covars.full_abbr_dative}} {% trans 'privacy_policy_text_1_2' %} \"{{ covars.name}}\" {{covars.website}}.</p>\n<div style=\"text-align: left\">\n<bold>{% trans 'privacy_policy_title_2' %}</bold>\n</div>\n<p>{% trans 'privacy_policy_text_2_1' %} {{covars.website}}; {% trans 'privacy_policy_text_2_2' %} {{covars.website}}; {% trans 'privacy_policy_text_2_3' %}  {{covars.website}}; {% trans 'privacy_policy_text_2_4' %}</p>\n<div style=\"text-align: left\">\n<bold>{% trans 'privacy_policy_title_3_1' %} {{covars.short_abbr}} \"{{covars.name}}\":</bold>\n</div>\n<p>{% trans 'privacy_policy_text_3' %}</p>\n<div style=\"text-align: left\">\n<bold>{% trans 'privacy_policy_title_4' %}</bold>\n</div>\n<p>{% trans 'privacy_policy_text_4_1' %}  {{covars.short_abbr}}  \"{{covars.name}}\"{% trans 'privacy_policy_text_4_2' %} {{covars.confidential_email}} {% trans 'privacy_policy_text_4_3' %}</p>\n<div style=\"text-align: left\">\n<bold>{% trans 'privacy_policy_title_5' %}</bold>\n</div>\n<p>{% trans 'privacy_policy_text_5_1' %} {{covars.website}} {% trans 'privacy_policy_text_5_2' %} </p>\n<div style=\"text-align: left\">\n<bold>{% trans 'privacy_policy_title_6' %}</bold>\n</div>\n<p>{% trans 'privacy_policy_text_6_1' %} {{covars.confidential_email}} {% trans 'privacy_policy_text_6_2' %} {{covars.confidential_email}} {% trans 'privacy_policy_text_6_3' %}</p>\n<div style=\"text-align: left\">\n<bold>{% trans 'privacy_policy_title_7' %}</bold>\n</div>\n<p>{% trans 'privacy_policy_text_7' %}</p>\n<div style=\"text-align: left\">\n<bold>{% trans 'privacy_policy_title_8' %}</bold>\n</div>\n<p>{% trans 'privacy_policy_text_8_1' %} {{covars.confidential_email}}. {% trans 'privacy_policy_text_8_2' %} {{covars.confidential_link}}.</p>\n\n",
+  "context": "<div class=\"digital-document\"><div style=\"text-align: right; margin:\">\n<p style=\"margin: 0px !important\">{% trans 'APPROVED' %}</p>\n<p style=\"margin: 0px !important\">{% trans 'protocol' %} {{ vars.privacy_agreement.protocol_number }}</p>\n<p style=\"margin: 0px !important\">{{ coop.full_name }} </p>\n<p style=\"margin: 0px !important\">{% trans 'from' %} {{ vars.privacy_agreement.protocol_day_month_year }}</p>\n</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'PRIVACY_POLICY' %}</h1>\n</div>\n<div style=\"text-align: left\">\n<b>{% trans 'privacy_policy_title_1' %}</b>\n</div>\n<p> {% trans 'privacy_policy_text_1_1' %} {{vars.full_abbr_dative}} {% trans 'privacy_policy_text_1_2' %} \"{{ vars.name}}\" {{vars.website}}.</p>\n<div style=\"text-align: left\">\n<b>{% trans 'privacy_policy_title_2' %}</b>\n</div>\n<p>{% trans 'privacy_policy_text_2_1' %} {{vars.website}}; {% trans 'privacy_policy_text_2_2' %} {{vars.website}}; {% trans 'privacy_policy_text_2_3' %}  {{vars.website}}; {% trans 'privacy_policy_text_2_4' %}</p>\n<div style=\"text-align: left\">\n<b>{% trans 'privacy_policy_title_3_1' %} {{vars.short_abbr}} \"{{vars.name}}\":</b>\n</div>\n<p>{% trans 'privacy_policy_text_3' %}</p>\n<div style=\"text-align: left\">\n<b>{% trans 'privacy_policy_title_4' %}</b>\n</div>\n<p>{% trans 'privacy_policy_text_4_1' %}  {{vars.short_abbr}}  \"{{vars.name}}\"{% trans 'privacy_policy_text_4_2' %} {{vars.confidential_email}} {% trans 'privacy_policy_text_4_3' %}</p>\n<div style=\"text-align: left\">\n<b>{% trans 'privacy_policy_title_5' %}</b>\n</div>\n<p>{% trans 'privacy_policy_text_5_1' %} {{vars.website}} {% trans 'privacy_policy_text_5_2' %} </p>\n<div style=\"text-align: left\">\n<b>{% trans 'privacy_policy_title_6' %}</b>\n</div>\n<p>{% trans 'privacy_policy_text_6_1' %} {{vars.confidential_email}} {% trans 'privacy_policy_text_6_2' %} {{vars.confidential_email}} {% trans 'privacy_policy_text_6_3' %}</p>\n<div style=\"text-align: left\">\n<b>{% trans 'privacy_policy_title_7' %}</b>\n</div>\n<p>{% trans 'privacy_policy_text_7' %}</p>\n<div style=\"text-align: left\">\n<b>{% trans 'privacy_policy_title_8' %}</b>\n</div>\n<p>{% trans 'privacy_policy_text_8_1' %} {{vars.confidential_email}}. {% trans 'privacy_policy_text_8_2' %} {{vars.confidential_link}}.</p>\n</div>\n<style>\n.digital-document {\npadding: 20px;\n};\n</style>\n\n",
   "model": {
     "coop.full_name": "потребительский кооператив \"Восход\"",
-    "covars.full_abbr_dative": "потребительском кооперативе",
-    "covars.confidential_link": "www.confidential.ru",
-    "covars.confidential_email": "confidential@email.ru",
-    "covars.name": "Восход",
-    "covars.website": "цифровой-кооператив.рф",
-    "covars.short_abbr": "ПК",
-    "covars.privacy_agreement.protocol_number": "10-04-2024",
-    "covars.privacy_agreement.protocol_day_month_year": "10 апреля 2024 г."
+    "vars.full_abbr_dative": "потребительском кооперативе",
+    "vars.confidential_link": "www.confidential.ru",
+    "vars.confidential_email": "confidential@email.ru",
+    "vars.name": "Восход",
+    "vars.website": "цифровой-кооператив.рф",
+    "vars.short_abbr": "ПК",
+    "vars.privacy_agreement.protocol_number": "10-04-2024",
+    "vars.privacy_agreement.protocol_day_month_year": "10 апреля 2024 г."
   },
   "translation": {
     "APPROVED": "УТВЕРЖДЕНО",
@@ -47,7 +47,7 @@
     "coop": {
       "full_name": "потребительский кооператив \"Восход\""
     },
-    "covars": {
+    "vars": {
       "full_abbr_dative": "потребительском кооперативе",
       "confidential_link": "www.confidential.ru",
       "confidential_email": "confidential@email.ru",

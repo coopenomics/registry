@@ -1,17 +1,17 @@
 {
-  "context": "<div style=\"text-align: right; margin:\">\n<p style=\"margin: 0px !important\">{% trans 'APPROVED' %}</p>\n<p style=\"margin: 0px !important\">{% trans 'protocol' %} {{ covars.user_agreement.protocol_number }}</p>\n<p style=\"margin: 0px !important\">{{ covars.full_abbr_genitive }} {{covars.name}}</p>\n<p style=\"margin: 0px !important\">{% trans 'from' %} {{ covars.user_agreement.protocol_day_month_year }}</p>\n</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'USER_AGREEMENT' %} {{covars.full_abbr_genitive}} \"{{covars.name}}\"</h1>\n</div>\n<div style=\"text-align: left\">\n<p>{{covars.full_abbr}} \"{{covars.name}}\" {% trans 'user_agreement_text_2' %} {{coop.chairman.last_name}} {{coop.chairman.first_name}} {{coop.chairman.middle_name}}  {% trans 'user_agreement_text_3' %} {{covars.website}} {% trans 'user_agreement_text_4' %} </p>\n<p> {% trans 'user_agreement_text_5' %} {{user.full_name}}</p>\n<p> {% trans 'user_agreement_text_6' %} {{covars.full_abbr_genitive}} \"{{covars.name}}\" {{coop.chairman.last_name}} {{coop.chairman.first_name}} {{coop.chairman.middle_name}}.</p>\n<p>{{meta.created_at}}</p>",
+  "context": "<div class=\"digital-document\"><div style=\"text-align: right; margin:\">\n<p style=\"margin: 0px !important\">{% trans 'APPROVED' %}</p>\n<p style=\"margin: 0px !important\">{% trans 'protocol' %} {{ vars.user_agreement.protocol_number }}</p>\n<p style=\"margin: 0px !important\">{{ vars.full_abbr_genitive }} {{vars.name}}</p>\n<p style=\"margin: 0px !important\">{% trans 'from' %} {{ vars.user_agreement.protocol_day_month_year }}</p>\n</div>\n<div style=\"text-align: center\">\n<h1 class=\"header\"> {% trans 'USER_AGREEMENT' %} {{vars.full_abbr_genitive}} \"{{vars.name}}\"</h1>\n</div>\n<div style=\"text-align: left\">\n<p>{{vars.full_abbr}} \"{{vars.name}}\" {% trans 'user_agreement_text_2' %} {{coop.chairman.last_name}} {{coop.chairman.first_name}} {{coop.chairman.middle_name}}  {% trans 'user_agreement_text_3' %} {{vars.website}} {% trans 'user_agreement_text_4' %} </p>\n<p> {% trans 'user_agreement_text_5' %} {{user.full_name}}</p>\n<p> {% trans 'user_agreement_text_6' %} {{vars.full_abbr_genitive}} \"{{vars.name}}\" {{coop.chairman.last_name}} {{coop.chairman.first_name}} {{coop.chairman.middle_name}}.</p>\n<p>{{meta.created_at}}</p></div>\n\n<style>.digital-document {padding: 20px;}</style>",
   "model": {
     "meta.created_at": "11.01.2024 20:24",
-    "covars.name": "Восход",
+    "vars.name": "Восход",
     "user.full_name": "Иванов Иван Иванович",
-    "covars.full_abbr_genitive": "потребительского кооператива",
-    "covars.full_abbr": "Потребительский Кооператив",
-    "covars.website": "https://website.com",
+    "vars.full_abbr_genitive": "потребительского кооператива",
+    "vars.full_abbr": "Потребительский Кооператив",
+    "vars.website": "https://website.com",
     "coop.chairman.last_name": "Муравьев",
     "coop.chairman.middle_name": "Николаевич",
     "coop.chairman.first_name": "Алексей",
-    "covars.user_agreement.protocol_number": "10-04-2024",
-    "covars.user_agreement.protocol_day_month_year": "10 апреля 2024 г."
+    "vars.user_agreement.protocol_number": "10-04-2024",
+    "vars.user_agreement.protocol_day_month_year": "10 апреля 2024 г."
   },
   "translation": {
     "APPROVED": "УТВЕРЖДЕНО",
@@ -28,7 +28,7 @@
     "meta": {
       "created_at": "11.01.2024 20:24"
     },
-    "covars": {
+    "vars": {
       "name": "Восход",
       "full_abbr_genitive": "потребительского кооператива",
       "full_abbr": "Потребительский Кооператив",
