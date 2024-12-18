@@ -3,7 +3,7 @@
   "model": {
     "meta.created_at": "12.02.2024 00:01",
     "coop.city": "Москва",
-    "coop.full_address": "Вострецова 3-84",
+    "coop.full_address": "Смольная 3-84",
     "decision.time": "00:01",
     "member.is_chairman": "true",
     "member.last_name": "Муравьев",
